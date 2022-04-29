@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.pixelexperience.ota;
+package com.spark.ota;
 
 import android.annotation.SuppressLint;
 import android.app.NotificationChannel;
@@ -29,7 +29,7 @@ import android.util.Log;
 import androidx.core.app.NotificationCompat;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
-import org.pixelexperience.ota.misc.FileUtils;
+import com.spark.ota.misc.FileUtils;
 
 import java.io.File;
 import java.io.IOException;

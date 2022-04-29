@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"></LinearLayout>
 
-        <org.pixelexperience.ota.ExtraCardView
+        <com.spark.ota.ExtraCardView
             android:id="@+id/donate_card"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -36,7 +36,7 @@
             extra_card_view:summary="@string/donate_info_summary"
             extra_card_view:title="@string/donate_info_title" />
 
-        <org.pixelexperience.ota.ExtraCardView
+        <com.spark.ota.ExtraCardView
             android:id="@+id/forum_card"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -54,7 +54,7 @@
             extra_card_view:summary="@string/forum_info_summary"
             extra_card_view:title="@string/forum_info_title" />
 
-        <org.pixelexperience.ota.ExtraCardView
+        <com.spark.ota.ExtraCardView
             android:id="@+id/website_card"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -72,7 +72,7 @@
             extra_card_view:summary="@string/website_info_summary"
             extra_card_view:title="@string/website_info_title" />
 
-        <org.pixelexperience.ota.ExtraCardView
+        <com.spark.ota.ExtraCardView
             android:id="@+id/news_card"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

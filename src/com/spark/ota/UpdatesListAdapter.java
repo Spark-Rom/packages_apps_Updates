@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.pixelexperience.ota;
+package com.spark.ota;
 
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
@@ -41,12 +41,12 @@ import androidx.appcompat.widget.PopupMenu;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import org.pixelexperience.ota.controller.UpdaterController;
-import org.pixelexperience.ota.misc.Constants;
-import org.pixelexperience.ota.misc.StringGenerator;
-import org.pixelexperience.ota.misc.Utils;
-import org.pixelexperience.ota.model.UpdateInfo;
-import org.pixelexperience.ota.model.UpdateStatus;
+import com.spark.ota.controller.UpdaterController;
+import com.spark.ota.misc.Constants;
+import com.spark.ota.misc.StringGenerator;
+import com.spark.ota.misc.Utils;
+import com.spark.ota.model.UpdateInfo;
+import com.spark.ota.model.UpdateStatus;
 
 import java.text.DateFormat;
 import java.text.NumberFormat;

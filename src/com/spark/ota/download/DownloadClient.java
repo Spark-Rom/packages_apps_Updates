@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.pixelexperience.ota.download;
+package com.spark.ota.download;
 
 import java.io.File;
 import java.io.IOException;

@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.pixelexperience.ota.controller;
+package com.spark.ota.controller;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -22,11 +22,11 @@ import android.os.SystemClock;
 import android.os.SystemProperties;
 import android.util.Log;
 
-import org.pixelexperience.ota.misc.Constants;
-import org.pixelexperience.ota.misc.FileUtils;
-import org.pixelexperience.ota.misc.Utils;
-import org.pixelexperience.ota.model.UpdateInfo;
-import org.pixelexperience.ota.model.UpdateStatus;
+import com.spark.ota.misc.Constants;
+import com.spark.ota.misc.FileUtils;
+import com.spark.ota.misc.Utils;
+import com.spark.ota.model.UpdateInfo;
+import com.spark.ota.model.UpdateStatus;
 
 import java.io.File;
 import java.io.IOException;

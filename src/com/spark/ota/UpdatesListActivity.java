@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.pixelexperience.ota;
+package com.spark.ota;
 
 import androidx.appcompat.app.AppCompatActivity;
 

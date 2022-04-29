@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.pixelexperience.ota.controller;
+package com.spark.ota.controller;
 
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
@@ -31,14 +31,14 @@ import android.util.Log;
 import androidx.core.app.NotificationCompat;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
-import org.pixelexperience.ota.R;
-import org.pixelexperience.ota.UpdaterReceiver;
-import org.pixelexperience.ota.UpdatesActivity;
-import org.pixelexperience.ota.UpdatesCheckReceiver;
-import org.pixelexperience.ota.misc.Utils;
-import org.pixelexperience.ota.model.Update;
-import org.pixelexperience.ota.model.UpdateInfo;
-import org.pixelexperience.ota.model.UpdateStatus;
+import com.spark.ota.R;
+import com.spark.ota.UpdaterReceiver;
+import com.spark.ota.UpdatesActivity;
+import com.spark.ota.UpdatesCheckReceiver;
+import com.spark.ota.misc.Utils;
+import com.spark.ota.model.Update;
+import com.spark.ota.model.UpdateInfo;
+import com.spark.ota.model.UpdateStatus;
 
 import java.text.NumberFormat;
 

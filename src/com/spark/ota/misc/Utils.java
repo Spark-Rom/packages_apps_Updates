@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.pixelexperience.ota.misc;
+package com.spark.ota.misc;
 
 import android.annotation.SuppressLint;
 import android.app.AlarmManager;
@@ -34,12 +34,12 @@ import com.google.gson.reflect.TypeToken;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.pixelexperience.ota.controller.UpdaterService;
-import org.pixelexperience.ota.model.MaintainerInfo;
-import org.pixelexperience.ota.model.Update;
-import org.pixelexperience.ota.model.UpdateBaseInfo;
-import org.pixelexperience.ota.model.UpdateInfo;
-import org.pixelexperience.ota.model.UpdateStatus;
+import com.spark.ota.controller.UpdaterService;
+import com.spark.ota.model.MaintainerInfo;
+import com.spark.ota.model.Update;
+import com.spark.ota.model.UpdateBaseInfo;
+import com.spark.ota.model.UpdateInfo;
+import com.spark.ota.model.UpdateStatus;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -109,10 +109,6 @@ public class Utils {
     }
 
     public static boolean isCompatible(UpdateBaseInfo update) {
-        if (update.getVersion().compareTo(SystemProperties.get(Constants.PROP_BUILD_VERSION)) < 0) {
-            Log.d(TAG, update.getName() + " with version " + update.getVersion() + " is older than current Android version " + SystemProperties.get(Constants.PROP_BUILD_VERSION));
-            return false;
-        }
         if (update.getTimestamp() <= SystemProperties.getLong(Constants.PROP_BUILD_DATE, 0)) {
             Log.d(TAG, update.getName() + " with timestamp " + update.getTimestamp() + " is older than/equal to the current build " + SystemProperties.getLong(Constants.PROP_BUILD_DATE, 0));
             return false;
@@ -121,9 +117,7 @@ public class Utils {
     }
 
     public static boolean canInstall(UpdateBaseInfo update) {
-        return (update.getTimestamp() > SystemProperties.getLong(Constants.PROP_BUILD_DATE, 0)) &&
-                update.getVersion().equalsIgnoreCase(
-                        SystemProperties.get(Constants.PROP_BUILD_VERSION));
+        return (update.getTimestamp() > SystemProperties.getLong(Constants.PROP_BUILD_DATE, 0));
     }
 
     public static UpdateInfo parseJson(File file, boolean compatibleOnly, Context context)
@@ -151,17 +145,8 @@ public class Utils {
         return null;
     }
 
-    private static String getBuildType(){
-        return SystemProperties.get(Constants.PROP_BUILD_TYPE, "");
-    }
-
     public static String getServerURL() {
-        String buildType = getBuildType();
-        if (buildType.equals("OFFICIAL")){
-            return String.format(Constants.OTA_URL, SystemProperties.get(Constants.PROP_DEVICE), SystemProperties.get(Constants.PROP_BUILD_VERSION));
-        }else{
-            return String.format(Constants.OTA_CI_URL, SystemProperties.get(Constants.PROP_DEVICE), SystemProperties.get(Constants.PROP_BUILD_VERSION));
-        }
+        return String.format(Constants.OTA_URL, SystemProperties.get(Constants.PROP_DEVICE));
     }
 
     public static String getMaintainerURL(String username) {
@@ -169,7 +154,7 @@ public class Utils {
     }
 
     public static String getDownloadWebpageUrl(String fileName) {
-        return String.format(Constants.DOWNLOAD_WEBPAGE_URL, SystemProperties.get(Constants.PROP_DEVICE), fileName);
+        return String.format(Constants.DOWNLOAD_WEBPAGE_URL, SystemProperties.get(Constants.PROP_DEVICE));
     }
 
     public static void triggerUpdate(Context context) {

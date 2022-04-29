@@ -14,14 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.pixelexperience.ota.model;
+package com.spark.ota.model;
 
-import java.io.File;
+import java.util.ArrayList;
 
-public interface UpdateInfo extends UpdateBaseInfo {
-    UpdateStatus getStatus();
+public interface UpdateBaseInfo {
+    String getName();
 
-    File getFile();
+    String getDownloadId();
+
+    long getTimestamp();
+
+    String getVersion();
+
+    String getDownloadUrl();
 
     long getFileSize();
+
+    String getDonateUrl();
+
+    String getForumUrl();
+
+    String getWebsiteUrl();
+
+    String getNewsUrl();
+
+    ArrayList<MaintainerInfo> getMaintainers();
+
+    String getHash();
 }
